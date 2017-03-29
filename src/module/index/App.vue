@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import '../../assets/js/lib/viewpoint.js'
 import vhead from '../../components/common/Head'
 import vfoot from '../../components/common/Foot'
 import vindex from '../../components/index/Index'

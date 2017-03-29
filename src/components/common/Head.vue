@@ -1,12 +1,17 @@
 <template>
-	<h1>This is Head!</h1>
+	<div id="head">
+		<a href="#" class="ruleBtn"></a>
+	 	<a href="#" class="newsBtn"></a>
+	 	<a href="#" class="listBtn"></a>
+	</div>
 </template>
 
-<script></script>
-
-<!-- 加入scoped是为了防止本组件中的css渗透到其他组件，可以去掉看看结果 -->
+<script>
+	
+</script>
 <style scoped lang="scss">
-	h1{
-		color: black;
-	}
+ @import '../../assets/sass/base/_mobile.scss';  
+ @import '../../assets/sass/base/_mixin.scss';
+ @import '../../assets/sass/base/commons.scss'; 
+ @import '../../assets/sass/head.scss';	
 </style>
