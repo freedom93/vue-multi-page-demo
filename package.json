@@ -10,8 +10,9 @@
     "test": "node build/test.js"
   },
   "dependencies": {
+    "babel-runtime": "^6.0.0",
     "vue": "^1.0.21",
-    "babel-runtime": "^6.0.0"
+    "vue-lazyload": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -39,6 +40,7 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
+    "vue-lazyload-img": "^0.1.6",
     "vue-loader": "^8.3.0",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.2",

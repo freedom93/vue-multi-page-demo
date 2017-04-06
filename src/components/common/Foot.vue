@@ -7,13 +7,13 @@
 <style scoped lang="scss">
 @import '../../assets/sass/base/_mixin.scss';
 span{
-	color: #f5f5f5;
+	color: #763318;
 	display: block;
 	text-align: center;
-	font-size: rem(24);
+	font-size: rem(20);
 	padding-bottom: rem(30);
-	padding-top: rem(30);
+	padding-top: rem(20);
 	white-space: nowrap;
-}
-@import '../../assets/sass/head.scss';	
+	background-color: #FFE36B;
+}	
 </style>
