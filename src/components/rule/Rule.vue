@@ -22,7 +22,7 @@ import img12 from '../../assets/images/rule-img12.jpg';
 import img13 from '../../assets/images/rule-img13.jpg';
 import img14 from '../../assets/images/rule-img14.jpg';
 import img15 from '../../assets/images/rule-img15.jpg';
-//use
+
 Vue.use(Vue.lazyimg,{
     fade: true,
     nohori: true,
