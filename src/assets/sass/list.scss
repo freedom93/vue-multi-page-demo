@@ -1,0 +1,127 @@
+$title1: '../../assets/images/list/list-title2.png';
+$title2: '../../assets/images/list/list-title1.png';
+$rank1: '../../assets/images/list/rank1.png';
+$rank2: '../../assets/images/list/rank2.png';
+$rank3: '../../assets/images/list/rank3.png';
+$duanwei: '../../assets/images/list/duanwei.png';
+$live: '../../assets/images/list/list-live.png';
+@mixin setTitle($w, $h, $url){
+    .title{
+        display: block;
+        width: rem($w);
+        height: rem($h);
+        background: url($url) no-repeat;
+        background-size: 100% auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: rem(30);
+        margin-bottom: rem(20);
+    }
+}
+@mixin setTable(){
+    tr:nth-child(even){
+        background-color: #F5F5F5;
+    }
+    td{
+        height: rem(158);
+    }
+    span{
+        display: block;
+    }
+    .rank{
+        width: rem(44);
+        line-height: rem(58);
+        font-size: rem(20);
+        margin-left: rem(24);
+        margin-right: rem(20);
+        color: #747474;
+        text-align: center;
+        &.rank1{
+            height: rem(58);
+            background: url($rank1) no-repeat;
+            background-size: 100% auto;
+        }
+        &.rank2{
+            height: rem(58);
+            background: url($rank2) no-repeat;
+            background-size: 100% auto;
+        }
+        &.rank3{
+            height: rem(58);
+            background: url($rank3) no-repeat;
+            background-size: 100% auto;
+        }
+    }
+    .avator{
+        width: rem(90);
+        height: rem(90);
+        border-radius: rem(90);
+        border: rem(3) solid #8ae8f2;
+        margin-left: rem(9);
+        margin-right: rem(25)
+    }
+    .duanwei{
+        display: block;
+        width: rem(108);
+        height: rem(28);
+        background: url($duanwei) no-repeat;
+        background-size: 100% auto;
+        line-height: rem(26);
+        text-align: center;
+        margin-top: rem(-18);
+        color: #276655;
+        position: relative;
+        z-index: 1;
+        font-size: rem(18);
+    }
+    .nickname{
+        font-size: rem(22);
+        padding-bottom: rem(10);
+        color: #723312;
+        width: rem(750-40-8-88-130-24-80);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: rem(24)
+    }
+    .value{
+        font-size: rem(18);
+        color: #747474;
+        em{
+            color: #FE6557;
+        }
+    }
+    .broadcast{
+        display: block;
+        width: rem(56);
+        height: rem(56);
+        margin-right: rem(25);
+        &.live{
+            background: url($live) no-repeat;
+            background-size: 100% auto;
+        }
+    }
+
+}
+#list-anchor{
+    @include setTitle(320, 94, $title1);
+}
+#list-tianti{
+    @include setTitle(171, 48, $title2);
+    .listWrap{
+        margin-left: rem(20);
+        margin-right: rem(20);
+        margin-bottom: rem(30);
+        border: rem(4) solid #723312;
+        border-radius: rem(16);
+        background-color: #fff;
+        @include setTable();
+    }
+}
+.yellowBlank{
+    background:#f5c73a;
+    height: rem(15);
+    clear: both;
+    display: block;
+    margin: rem(20) 0;     
+}

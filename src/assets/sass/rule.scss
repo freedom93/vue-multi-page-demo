@@ -1,7 +1,4 @@
-#rule{
-    width: rem(750);
-    overflow: hidden;
-}
+
 @mixin ruleItem($idx, $imgW){
     .img#{$idx}{
         display: block;
@@ -24,10 +21,12 @@
         @else { height: rem(610); } 
     } 
 }
-.rule-item{
+#rule{
+    width: rem(750);
+    overflow: hidden;
     @for $i from 1 through 15{
         @include ruleItem($i, $imgW: 750);  
-    }      
+    }  
 }
 .img9Wrap{
     width: rem(750-24);
