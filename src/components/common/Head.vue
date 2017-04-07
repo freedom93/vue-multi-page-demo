@@ -1,6 +1,6 @@
 <template>
 	<div id="head">
-		<a v-on:click="goWebPage('rule')" class="ruleBtn active"></a>
+		<a v-on:click="goWebPage('rule')" class="ruleBtn"></a>
 	 	<a v-on:click="goWebPage('news')" class="newsBtn"></a>
 	 	<a v-on:click="goWebPage('list')" class="listBtn"></a>
 	</div>
@@ -21,7 +21,6 @@ export default {
     		type == 'list' && ($listBtn.addClass('active'), url = 'list.html')
             window.location.href = url;
         }
-
     }
 }
 </script>

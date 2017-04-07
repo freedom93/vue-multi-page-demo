@@ -46,7 +46,8 @@ export default {
         return {imgList: imgList}
      },         
      ready:function(){
-                    
+        let $ruleBtn = $('.ruleBtn');
+        $ruleBtn.addClass('active');        
      }    
 }
 
