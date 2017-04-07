@@ -15,11 +15,10 @@ export default {
     		let $newsBtn = $('.newsBtn');
     		let $listBtn = $('.listBtn');
     		let url = '';
-    		$head.removeClass('active');
-    		type == 'rule' && ($ruleBtn.addClass('active'), url = 'rule.html')
-    		type == 'news' && ($newsBtn.addClass('active'), url = 'news.html')
-    		type == 'list' && ($listBtn.addClass('active'), url = 'list.html')
-            window.location.href = url;
+    		type == 'rule' && ($ruleBtn.hasClass('active') ? url = '' : url = 'rule.html', $ruleBtn.addClass('active'))
+    		type == 'news' && ($newsBtn.hasClass('active') ? url = '' : url = 'news.html', $newsBtn.addClass('active'))
+    		type == 'list' && ($listBtn.hasClass('active') ? url = '' : url = 'list.html', $listBtn.addClass('active'))
+            url !== '' && (window.location.href = url)
         }
     }
 }
