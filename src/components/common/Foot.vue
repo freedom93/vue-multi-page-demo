@@ -11,9 +11,9 @@ span{
 	display: block;
 	text-align: center;
 	font-size: rem(20);
-	padding-bottom: rem(30);
-	padding-top: rem(20);
+	padding-bottom: rem(20);
+	padding-top: rem(10);
 	white-space: nowrap;
-	background-color: #FFE36B;
+	background-color: #f5c73a;
 }	
 </style>
