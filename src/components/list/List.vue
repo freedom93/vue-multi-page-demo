@@ -15,7 +15,7 @@
                         <span class="tip">主播呢称</span>
                         <span class="nick">{{item.nick}}</span>
                         <span class="tip">闪耀值</span>
-                        <span class="value">{{item.value}}</span>
+                        <span class="value">{{item.value | formatNumber}}</span>
                     </td>
                     <td>
                         <i class="broadcast{{item.live == 1 ? ' live' : ''}}"></i>
@@ -29,7 +29,7 @@
                         <span class="tip">壕友呢称</span>
                         <span class="nick">{{item.nick}}</span>
                         <span class="tip">影响力</span>
-                        <span class="value">{{item.value}}</span>
+                        <span class="value">{{item.value | formatNumber}}</span>
                     </td>
                 </tr>
             </table>
@@ -64,7 +64,6 @@
 import Vue from 'vue';
 Vue.filter('formatDuanwei', function (type) {
     let duanwei = '';
-    console.log(type);
     switch(Number(type)){
         case 1: duanwei = '青铜段位'; break;
         case 2: duanwei = '白银段位'; break;
@@ -75,6 +74,14 @@ Vue.filter('formatDuanwei', function (type) {
         default: duanwei = '暂无段位'; break;
     }
     return duanwei;
+})
+Vue.filter('formatNumber', function (num) {
+    if (!num) {
+        return "0";
+    }
+    var num1 = parseInt(num/10000);
+    return num >= 100000000 ? (num1.toString().replace(/(?=(?!^)(\d{3})+$)/g, ',')+'万') : (num.toString().replace(/(?=(?!^)(\d{3})+$)/g, ','));
+
 })
 export default {
     data:function(){
@@ -88,10 +95,10 @@ export default {
             headlineList[i].nick = (i % 2 == 0 ? ('头条头条头条头条头条头条'+i) : (('头条头条头头条头条头条头条头条头条头条头条'+i)));
             headlineList[i].avator = '../../assets/images/list/yy.png';
             headlineList[i].live = (i % 2 == 1 ? 1 : 0);
-            headlineList[i].value = ( i % 2 == 1 ? 1000 * i : 200 * i);
+            headlineList[i].value = 64369991 * (10 - i);
 
             userList[i] = {};
-            userList[i].value = (i+1);
+            userList[i].value = 12345 * (10 - i);
             userList[i].nick = (i % 2 == 0 ? ('头条头条头条头条头条头条'+i) : (('头条头条头条头条头条头条头条头条头条头条头条'+i)));
 
             tiantiList[i] = {};
