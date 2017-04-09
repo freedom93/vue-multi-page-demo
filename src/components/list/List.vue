@@ -8,7 +8,7 @@
                 <tr v-for="(index, item) in headlineList">
                     <td><span class="rank{{index < 3 ? (' rank'+(index+1)) : ''}}">{{index > 2 ? (index + 1) : ''}}</span></td>
                     <td>
-                        <img class="avator" src="../../assets/images/list/yy.png" onerror="this.src='../../assets/images/list/yy.png'" />
+                        <img class="avator" v-bind:src=item.avator onerror="this.src='//s1.yy.com/guild/header/10001.jpg'" />
                         <i class="duanwei">{{item.duanwei | formatDuanwei}}</i>
                     </td>
                     <td>
@@ -44,7 +44,7 @@
                 <tr v-for="(index, item) in tiantiList">
                     <td><span class="rank{{index < 3 ? (' rank'+(index+1)) : ''}}">{{index > 2 ? (index + 1) : ''}}</span></td>
                     <td>
-                        <img class="avator" src="../../assets/images/list/yy.png" onerror="this.src='../../assets/images/list/yy.png'" />
+                        <img class="avator" v-bind:src=item.avator onerror="this.src='//s1.yy.com/guild/header/10001.jpg'" />
                         <i class="duanwei">{{item.duanwei | formatDuanwei}}</i>
                     </td>
                     <td>
@@ -93,7 +93,7 @@ export default {
             headlineList[i].rank = (i+1);
             headlineList[i].duanwei = (i > 6 ? (i - 6) : i);
             headlineList[i].nick = (i % 2 == 0 ? ('头条头条头条头条头条头条'+i) : (('头条头条头头条头条头条头条头条头条头条头条'+i)));
-            headlineList[i].avator = '../../assets/images/list/yy.png';
+            headlineList[i].avator = '//s1.yy.com/guild/header/10001.jpg';
             headlineList[i].live = (i % 2 == 1 ? 1 : 0);
             headlineList[i].value = 64369991 * (10 - i);
 
@@ -105,7 +105,7 @@ export default {
             tiantiList[i].rank = (i+1);
             tiantiList[i].duanwei = (i > 6 ? (i - 6) : i);
             tiantiList[i].nickname = (i % 2 == 0 ? ('头条头条头条头条头条头条'+i) : (('头条头条头条头条头条头条头条头条头条头条'+i)));
-            tiantiList[i].avator = '../../assets/images/list/yy.png';
+            tiantiList[i].avator = '//act.m.yystatic.com/act/images/default_grey_yy.png';
             tiantiList[i].stars = (i * 2);
             tiantiList[i].live = (i % 2 == 0 ? 1 : 0);
         }
