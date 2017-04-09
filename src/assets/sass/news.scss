@@ -104,14 +104,17 @@ $star: '../../assets/images/list/star.jpg';
 .list-item{
     margin-left: rem(20);
     float: left;
-    &:nth-child(odd){
+    &:nth-child(1),&:nth-child(2){
+        margin-top: rem(30);
+    }
+    &:nth-child(even){
         float: right;
         margin-right: rem(20);
     }
     .title{
         display: block;
         font-size: rem(28);
-        margin-top: rem(30);
+        // margin-top: rem(30);
         margin-bottom: rem(10);
         color: #723312;
     }

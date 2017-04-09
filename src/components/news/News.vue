@@ -12,27 +12,7 @@
                             <i class="duanwei">暂无段位</i>
                         </div>
                         <table>
-                            <tr>
-                                <td>
-                                    <p><span class="nick">虚位以待虚位以待虚位以待虚位以待虚位以待</span><i class="name">头条</i></p>
-                                    <span class="value">闪耀值：<em>798</em></span>
-                                    <i class="stars"></i>
-                                </td>
-                                <td>
-                                    <i class="people"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><span class="nick">虚位以待虚位以待虚位以待虚位以待虚位以待</span><i class="name">头条</i></p>
-                                    <span class="value">闪耀值：<em>798</em></span>
-                                    <i class="stars"></i>
-                                </td>
-                                <td>
-                                    <i class="people"></i>
-                                </td>
-                            </tr>
-                            <tr>
+                            <tr v-for="(index2, item2) in anchorList">
                                 <td>
                                     <p><span class="nick">虚位以待虚位以待虚位以待虚位以待虚位以待</span><i class="name">头条</i></p>
                                     <span class="value">闪耀值：<em>798</em></span>
@@ -70,14 +50,19 @@
 </template>
 
 <script>
-import Vue from 'vue'; 
+import Vue from 'vue';
 export default {
     data:function(){
+        let anchorList = [];
         let roundList = [];
-        for(let i = 0; i < 4; i++){
-            roundList[i] = {};
+        for(let j = 0; j < 4; j++){
+            j < 3 && (anchorList[j] = {});
+            roundList[j] = {};
         }
-        return {roundList: roundList}
+        return {
+            anchorList: anchorList,
+            roundList: roundList
+        }
      },
      ready:function(){
         let $newsBtn = $('.newsBtn');
