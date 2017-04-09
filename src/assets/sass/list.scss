@@ -18,16 +18,7 @@ $live: '../../assets/images/list/list-live.png';
         margin-bottom: rem(20);
     }
 }
-@mixin setTable(){
-    tr:nth-child(even){
-        background-color: #F5F5F5;
-    }
-    td{
-        height: rem(158);
-    }
-    span{
-        display: block;
-    }
+@mixin commons(){
     .rank{
         width: rem(44);
         line-height: rem(58);
@@ -66,19 +57,32 @@ $live: '../../assets/images/list/list-live.png';
         height: rem(28);
         background: url($duanwei) no-repeat;
         background-size: 100% auto;
-        line-height: rem(26);
+        line-height: rem(28);
         text-align: center;
         margin-top: rem(-18);
         color: #276655;
         position: relative;
         z-index: 1;
         font-size: rem(18);
+        font-style: normal;
     }
+}
+@mixin setTable(){
+    tr:nth-child(even){
+        background-color: #F5F5F5;
+    }
+    td{
+        height: rem(158);
+    }
+    span{
+        display: block;
+    }
+    @include commons();
     .nickname{
         font-size: rem(22);
         padding-bottom: rem(10);
         color: #723312;
-        width: rem(750-40-8-88-130-24-80);
+        width: rem(750-40-8-88-124-24-81);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -103,12 +107,79 @@ $live: '../../assets/images/list/list-live.png';
     }
 
 }
-#list-anchor{
+@mixin setTables(){
+    td{
+        height: rem(158);
+    }
+    tr{
+        border-bottom: 1px solid #e8e8e8;
+    }
+    span{
+        display: block;
+        font-size: rem(20);
+        padding-right: rem(10);
+        line-height: rem(30);
+    }
+    @include commons();
+    .tip{
+        color: #747474;
+    }
+    .value{
+        color: #FE6557;
+    }
+    .nick{
+        width: rem(200);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #723312;
+        margin-bottom: rem(5);
+    }
+    .broadcast{
+        display: block;
+        width: rem(56);
+        height: rem(56);
+        margin-right: rem(25);
+        margin-left: rem(5);
+        margin-top: rem(-30);
+        &.live{
+            background: url($live) no-repeat;
+            background-size: 100% auto;
+        }
+    }
+}
+#list-headline{
     @include setTitle(320, 94, $title1);
+    .listWrap{
+        width: rem(750-40);
+        overflow: hidden;
+        margin-left: rem(20);
+        margin-right: rem(20);
+        margin-bottom: rem(30);
+        border: rem(4) solid #723312;
+        border-radius: rem(16);
+        background-color: #fff;
+        position: relative;
+        .list-anchor{
+            float: left;
+        }
+        .list-user{
+            position: absolute;
+            right: 0;
+            top: 0;
+            span{
+                padding-left:rem(25);
+                border-left: 1px solid #e8e8e8;
+            }
+        }
+        @include setTables();
+    }
 }
 #list-tianti{
     @include setTitle(171, 48, $title2);
     .listWrap{
+        width: rem(750-40);
+        overflow: hidden;
         margin-left: rem(20);
         margin-right: rem(20);
         margin-bottom: rem(30);

@@ -1,7 +1,37 @@
 <template>
 	<!-- 实时榜 -->
-    <div id="list-anchor">
+    <div id="list-headline">
         <i class="title"></i>
+        <div class="listWrap">
+            <table class="list-anchor">
+                <tr v-for="(index, item) in tiantiList">
+                    <td><span class="rank{{index < 3 ? (' rank'+(index+1)) : ''}}">{{index > 2 ? (index + 1) : ''}}</span></td>
+                    <td>
+                        <img class="avator" src="../../assets/images/list/yy.png" onerror="this.src='../../assets/images/list/yy.png'" />
+                        <i class="duanwei">铂金段位</i>
+                    </td>
+                    <td>
+                        <span class="tip">主播呢称</span>
+                        <span class="nick">虚位以待虚位以待虚位以待虚位以待虚位以待虚位以待</span>
+                        <span class="tip">闪耀值</span>
+                        <span class="value">123,234,234</span>
+                    </td>
+                    <td>
+                        <i class="broadcast live"></i>
+                    </td>
+                </tr>
+            </table>
+            <table class="list-user">
+                <tr v-for="(index, item) in tiantiList">
+                    <td>
+                        <span class="tip">壕友呢称</span>
+                        <span class="nick">虚位以待虚位以待虚位以待</span>
+                        <span class="tip">影响力</span>
+                        <span class="value">123,234,234</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="yellowBlank"></div>
     <!-- 天梯榜 -->
@@ -13,11 +43,11 @@
                     <td><span class="rank{{index < 3 ? (' rank'+(index+1)) : ''}}">{{index > 2 ? (index + 1) : ''}}</span></td>
                     <td>
                         <img class="avator" src="../../assets/images/list/yy.png" onerror="this.src='../../assets/images/list/yy.png'" />
-                        <span class="duanwei">铂金段位</span> 
+                        <i class="duanwei">铂金段位</i>
                     </td>
                     <td>
                         <span class="nickname">{{item.nickname}}</span>
-                        <span class="value">星星数：<em>{{item.stars}}</em></h5>
+                        <span class="value">星星数：<em>{{item.stars}}</em></span>
                     </td>
                     <td>
                         <i class="broadcast{{item.live == 1 ? ' live' : ''}}"></i>
