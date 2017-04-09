@@ -1,16 +1,16 @@
 @mixin headIcons($h, $l, $r, $al, $ar) {
-    background: url('../../assets/images/head-icons.png') no-repeat;
+    background: url('../../assets/images/head/head-icons.png') no-repeat;
     background-size: rem(702) rem(168);
     height: rem($h);
     background-position: rem($l) rem($r);
     &.active{
-        background-position: rem($al) rem($ar);        
-    }  
+        background-position: rem($al) rem($ar);
+    }
 }
 #head{
     height: rem(771);
     width: 100%;
-    background: #f6c73b url('../../assets/images/head-background.jpg') no-repeat top center;
+    background: #f6c73b url('../../assets/images/head/head-background.jpg') no-repeat top center;
     background-size: contain;
     a{
         float: left;
@@ -30,4 +30,4 @@
     .listBtn{
         @include headIcons(79, -483, 0,- 483, -89);
     }
-} 
+}

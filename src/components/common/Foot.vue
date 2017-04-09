@@ -15,5 +15,5 @@ span{
 	padding-top: rem(10);
 	white-space: nowrap;
 	background-color: #f5c73a;
-}	
+}
 </style>

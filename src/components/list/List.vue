@@ -124,5 +124,5 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../../assets/sass/base/_mixin.scss';
-@import '../../assets/sass/list.scss';	
+@import '../../assets/sass/list.scss';
 </style>
