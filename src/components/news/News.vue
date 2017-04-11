@@ -37,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            <a class="load-more" href="javascript:void(0);" v-on:click="loadMore"></a>
         </div>
         <!-- <div class="yellowBlank"></div> -->
         <!-- 我的头条 -->
@@ -53,21 +54,34 @@
 import Vue from 'vue';
 export default {
     data:function(){
+        let dataList = {};
         let anchorList = [];
         let roundList = [];
         for(let j = 0; j < 4; j++){
             j < 3 && (anchorList[j] = {});
             roundList[j] = {};
         }
-        return {
-            anchorList: anchorList,
-            roundList: roundList
+        dataList.anchorList = anchorList;
+        dataList.roundList = roundList;
+        return dataList
+    },
+    methods: {
+        loadMore: function(){
+            let that = this;
+            let anchorList = that._data.anchorList;
+            let roundList = that._data.roundList;
+            for(let j = 4; j < 24; j++){
+                j < 3 && (anchorList[j] = {});
+                roundList[j] = {};
+            }
+            this._data.anchorList = anchorList;
+            this._data.roundList = roundList;
         }
-     },
-     ready:function(){
+    },
+    ready:function(){
         let $newsBtn = $('.newsBtn');
         $newsBtn.addClass('active');
-     }
+    }
 }
 
 </script>

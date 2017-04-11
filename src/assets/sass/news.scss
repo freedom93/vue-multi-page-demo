@@ -6,6 +6,7 @@ $rank3: '../../assets/images/list/rank3.png';
 $duanwei: '../../assets/images/list/duanwei.png';
 $people: '../../assets/images/list/people.png';
 $star: '../../assets/images/list/star.jpg';
+$more: '../../assets/images/list/more.png';
 .yellowBlank{
     background:#f5c73a;
     height: rem(15);
@@ -136,5 +137,16 @@ $star: '../../assets/images/list/star.jpg';
         margin-left: rem(20);
         @include setTable();
     }
+}
+.load-more{
+    display: block;
+    width: rem(690);
+    height: rem(92);
+    background: url($more) no-repeat;
+    background-size: 100% auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem(20);
+
 }
 
